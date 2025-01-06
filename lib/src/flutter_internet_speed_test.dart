@@ -73,11 +73,9 @@ class FlutterInternetSpeedTest {
         onDefaultServerSelectionDone(serverSelectionResponse?.client);
       }
       String? url = serverSelectionResponse?.targets?.first.url;
-      if (url != null) {
-        downloadTestServer = downloadTestServer ?? url;
-        uploadTestServer = uploadTestServer ?? url;
-      }
-    }
+      downloadTestServer = downloadTestServer ?? url;
+      uploadTestServer = uploadTestServer ?? url;
+        }
     if (downloadTestServer == null || uploadTestServer == null) {
       downloadTestServer = downloadTestServer ?? _defaultDownloadTestServer;
       uploadTestServer = uploadTestServer ?? _defaultUploadTestServer;
