@@ -180,7 +180,10 @@ class _MyAppState extends State<MyApp> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextButton.icon(
-                    onPressed: () => internetSpeedTest.cancelTest(),
+                    onPressed: () {
+                      reset();
+                      internetSpeedTest.cancelTest();
+                    },
                     icon: const Icon(Icons.cancel_rounded),
                     label: const Text('Cancel'),
                   ),
